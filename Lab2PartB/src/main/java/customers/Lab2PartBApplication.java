@@ -7,9 +7,9 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @SpringBootApplication
 @EnableAspectJAutoProxy
-public class Lab2PartAApplication {
+public class Lab2PartBApplication {
 	public static void main(String[] args) {
-		ConfigurableApplicationContext context = SpringApplication.run(Lab2PartAApplication.class, args);
+		ConfigurableApplicationContext context = SpringApplication.run(Lab2PartBApplication.class, args);
 
 		CustomerService customerService = context.getBean("customerServiceImpl", CustomerServiceImpl.class);
 		customerService.addCustomer("Frank Brown", "fbrown@acme.com",

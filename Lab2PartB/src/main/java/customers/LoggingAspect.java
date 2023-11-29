@@ -16,7 +16,7 @@ import java.util.Arrays;
 @Component
 public class LoggingAspect {
     @After("execution(* customers.EmailSenderImpl.sendEmail(..))")
-    public void logBefore(JoinPoint joinPoint) {
+    public void logAfter(JoinPoint joinPoint) {
         System.out.println(LocalDateTime.now() + " method = " + joinPoint.getSignature().getName());
         System.out.println("address = " + joinPoint.getArgs()[0] + " message = " + joinPoint.getArgs()[1]);
         EmailSenderImpl emailSender = (EmailSenderImpl)joinPoint.getTarget();
